@@ -35,7 +35,7 @@ pub fn handler(ctx: Context<CreateProfile>, params: CreateProfileParams) -> Resu
     user_profile.user_address = user.key();
     user_profile.user_name = params.user_name;  
     user_profile.user_location = params.user_location;  
-    user_profile.user_profile_bump =  *ctx.bumps.get("user_profile").unwrap();
+    user_profile.bump =  *ctx.bumps.get("user_profile").unwrap();
     user_profile.likes = 0;
     
     Ok(())

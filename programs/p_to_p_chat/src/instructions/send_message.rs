@@ -33,6 +33,6 @@ pub fn handler(ctx: Context<SendMessage>, params: SendMessageParams) -> Result<(
     message.receiver_address = params.receiver_address;  
     message.message = params.message;  
     message.read_receipt =  false;
-    
+    message.bump = *ctx.bumps.get("message").unwrap();
     Ok(())
 }

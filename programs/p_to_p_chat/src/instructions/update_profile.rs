@@ -7,7 +7,7 @@ pub struct UpdateProfile<'info>{
     #[account(
         mut, 
         seeds = [b"user_profile", user.key().as_ref()], 
-        bump = user_profile.user_profile_bump
+        bump = user_profile.bump
     )]
     pub user_profile: Account<'info, UserProfile>, 
     pub user: Signer<'info>,

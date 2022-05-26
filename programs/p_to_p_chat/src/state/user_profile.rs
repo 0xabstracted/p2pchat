@@ -7,7 +7,7 @@ pub struct UserProfile{
     pub user_name: String,
     pub user_location: String,
     pub likes: u16,
-    pub user_profile_bump: u8,
+    pub bump: u8,
 }
 
 
